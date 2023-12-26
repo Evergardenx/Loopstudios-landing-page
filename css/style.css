@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white-color : hsl(0, 0%, 100%);
+    --black--color : hsl(0, 0%, 0%);
+    --gray-color : hsl(0, 0%, 55%);
+    --dark-color : hsl(0, 0%, 41%);
+}
+body{
+    font-family :Arial, Helvetica, sans-serif;
+}
+a{
+
+    text-decoration: none;
+}
+ul li{
+    list-style-type: none;
+}
+a:hover {
+    padding-bottom: 8px;
+    border-bottom: 1px solid white;
+}
+/***********header****************/
+
+/*********nav**************/
+
+.navbar-nav{
+    width: 100%;
+    justify-content: end;
+}
+.navbar-dark .navbar-nav .nav-link{
+    color: var(--white-color);
+    margin-left: 1.5rem;
+}
+.hide{
+    display: none;
+}
+
+header {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0,0.5) , rgba(0, 0, 0,0.7)),url(../images/desktop/image-hero.jpg) no-repeat center center / cover;
+    
+}
+
+.description {
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+    height : 70vh;
+    width: auto;
+}
+.description .header-text{
+    border: 2px solid white;
+    padding: 1.5rem;
+    font-size:10vw;
+    font-weight: 300;
+    width: 100%;
+    color: var(--white-color);
+}
+
+/******************leader*****************/
+.leader{
+    display: flex;
+    padding: 5rem;
+    position:relative;
+}
+
+.leader .image img{
+    width: 100%;
+}
+.leader .content{
+    background-color: rgb(255, 255, 255);
+    padding: 0.1rem ;
+   
+}
+.leader .content h1{
+    font-weight: 300;
+    font-size:2rem;
+    line-height: .9;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+/********************creation***************/
+.creation {
+    margin-top: 2rem;
+    padding-top:2rem;
+}
+
+.creation .top button{
+    float:right;
+}
+.creation .top h3{
+    text-transform: uppercase;
+    font-size:2rem;
+    letter-spacing: 1.5px;
+    display : contents;
+}
+.creation  button.btn{
+    text-transform: uppercase;
+    border: 1px black solid;
+    padding: 5px 22px;
+    letter-spacing: 2.5px;
+}
+.catalogue{
+    position: relative;
+}
+.catalogue .span{
+    color: white;
+    font-size: 1.3rem;
+    height: 100%;
+    padding: 10px 15px;
+}
+.catalogue .span span{
+   position: absolute;
+   bottom: 15px;
+}
+
+/****************footer**********************/
+footer{
+    background-color: var(--black--color);
+}
+.footer-links{
+    display:flex;
+    padding: 0;   
+}
+.footer-links li a{
+    color: var(--white-color);  
+    padding-right: 15px;
+}
+footer .link{
+    text-align: right;
+    margin-bottom: 20px;
+}
+footer .link a{
+    padding-right:15px;
+}
+footer .copy{
+    text-align: right;
+}
+/************large devices only *****/
+
+@media (min-width: 1200px) {
+    .leader .content{
+        background-color: rgb(255, 255, 255);
+        padding: 2rem ;
+        position: relative; 
+        right: 7rem;
+        top: 10rem;  
+    }
+    .description {
+        width: 60%;
+    }
+    .description .header-text{
+        font-size:5em ;
+    }
+}
+
+
+/********** Medium devices only ****/
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .leader .content{
+        background-color: rgb(255, 255, 255);
+        padding: 2rem ;
+        position: relative; 
+        right: 7rem;
+        top: 10rem;  
+    }
+    .description {
+        width: 60%;
+    }
+    .description .header-text{
+        font-size:5em ;
+    }
+}
+
+/******Small divices only ******/
+
+@media (min-width: 768px) and (max-width: 991px){
+    .description .header-text{
+        font-size:5em ;
+    }
+    .description .header-text{
+        font-size:8vw ;
+    }
+    
+   
+
+}
+
+/****** Extra small devices only *****/
+
+@media (max-width: 767px){
+    .description .header-text{
+        font-size:10vw ;
+    }
+    nav.bg-collo{
+        background-color:black;
+    }
+    /***footer***/
+    footer{
+        text-align:center;
+    }
+    .footer-links{
+        display:flex;
+        padding: 0;  
+        flex-direction: column;
+        text-align:center; 
+    }
+    footer .link{
+        text-align : center;
+        margin-bottom: 20px;
+    }
+    footer .link a{
+        padding-right:15px;
+    }
+    footer .copy{
+        text-align : center;    
+    }
+}
